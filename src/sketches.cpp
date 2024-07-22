@@ -57,11 +57,6 @@ void SKETCHES::construct_sketches() {
         idx = config.graph_location + prefix + "_my_ads.idx";
     }
 
-    /* THIS IS THE STUFF I JUST ADDED */
-    string semantic;
-    semantic = allparsed.txt;
-    std::ofstream zfs(semantic);
-    boost::archive::binary_oarchive za(zfs);
     
     std::ofstream ofs(idx);
     boost::archive::binary_oarchive oa(ofs);
