@@ -152,6 +152,14 @@ Graph::Graph(const string &graph_path) {
     result.m = this->m;
     cout << "init graph graph n: " << this->n << " m: " << this->m << endl;
 
+    /* THIS IS THE CODE THAT I ADDED */
+    FILE *zin = fopen(allparsed.txt, "r");
+    int z1;
+    string semant;
+    while (fscanf(zin, "%d%s", &z1, &semant) != EOF) {
+        adj_list[z1].push_back(semant);
+    }
+
     clusterID = vector<int>(n, -1);
     is_core = vector<int>(n, -1);
     similarity = vector<unordered_map<int, bool >>(n, unordered_map<int, bool>{});
