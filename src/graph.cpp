@@ -83,7 +83,7 @@ void Graph::init(const string &graph_path) {
     cout << "init graph graph n: " << this->n << " m: " << this->m << endl;
 
     // Reading words from a text file
-    string words_file = data_folder + "allparsed.txt";  // Update the path as needed
+    string words_file = "/Users/karimrahmy/Desktop/kcore_dataset/allparsed/attribute.txt";  // Update the path as needed
     ifstream infile(words_file);
     if (!infile) {
         cerr << "Could not open the words file: " << words_file << endl;
